@@ -12,7 +12,7 @@ namespace csharp
             {
                 new Item {Name = "+5 Dexterity Vest", SellIn = 10, Quality = 20}
             };
-            QualityUpdater qualityUpdater = new QualityUpdater();
+            QualityUpdater qualityUpdater = QualityFactory.QualityManager(Items[0]);
             qualityUpdater.UpdateItemQuality(Items[0]);
             Assert.AreEqual(19, Items[0].Quality);
         }
@@ -37,7 +37,7 @@ namespace csharp
                 {
                     new Item {Name = "+5 Dexterity Vest", SellIn = 50, Quality = 40}
                 };
-                QualityUpdater qualityUpdater = new QualityUpdater();
+                QualityUpdater qualityUpdater = QualityFactory.QualityManager(Items[0]);
                 
                 for (int j = 0; j < numDaysToSimulate; j++)
                 {
@@ -75,7 +75,7 @@ namespace csharp
                 {
                     new Item {Name = "+5 Dexterity Vest", SellIn = 10, Quality = 10}
                 };
-                QualityUpdater qualityUpdater = new QualityUpdater();
+                QualityUpdater qualityUpdater = QualityFactory.QualityManager(Items[0]);
                 
                 for (int j = 0; j < numDaysToSimulate; j++)
                 {
@@ -95,7 +95,7 @@ namespace csharp
                 {
                     new Item {Name = "+5 Dexterity Vest", SellIn = 0, Quality = 50}
                 };
-                QualityUpdater qualityUpdater = new QualityUpdater();
+                QualityUpdater qualityUpdater = QualityFactory.QualityManager(Items[0]);
                 
                 for (int j = 0; j < numDaysToSimulate; j++)
                 {
