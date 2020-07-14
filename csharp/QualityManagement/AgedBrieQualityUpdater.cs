@@ -5,10 +5,9 @@ namespace csharp
 {
     public class AgedBrieQualityUpdater : QualityUpdater
     {
-        public const int AGED_BRIE_QUALITY_INCREASE = 1;
-        public override void UpdateItemQuality(Item item)
+        public AgedBrieQualityUpdater()
         {
-            item.Quality = Math.Min(DEFAULT_MAX_QUALITY, item.Quality + (AGED_BRIE_QUALITY_INCREASE*GetQualityChangeFactor(item)));
+            QualityDecrease = -DEFAULT_QUALITY_DECREASE;
         }
     }
 }

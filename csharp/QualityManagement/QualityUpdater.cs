@@ -8,9 +8,17 @@ namespace csharp
         public const int PAST_SELLIN_DATE_QUALITY_CHANGE_FACTOR = 2;
         public const int DEFAULT_MAX_QUALITY = 50;
         public const int DEFAULT_MIN_QUALITY = 0;
+        
+        public int QualityDecrease;
+        
+        public QualityUpdater()
+        {
+            QualityDecrease = DEFAULT_QUALITY_DECREASE;
+        }
+        
         public virtual void UpdateItemQuality(Item item)
         {
-            item.Quality = Math.Max(DEFAULT_MIN_QUALITY, item.Quality-(DEFAULT_QUALITY_DECREASE*GetQualityChangeFactor(item)));
+            item.Quality = Math.Min(DEFAULT_MAX_QUALITY, Math.Max(DEFAULT_MIN_QUALITY, item.Quality-(QualityDecrease*GetQualityChangeFactor(item))));
         }
 
         public int GetQualityChangeFactor(Item item)

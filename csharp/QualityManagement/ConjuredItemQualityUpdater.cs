@@ -4,10 +4,9 @@ namespace csharp
 {
     public class ConjuredItemQualityUpdater : QualityUpdater
     {
-        public const int CONJURED_QUALITY_DECREASE_FACTOR = 2;
-        public override void UpdateItemQuality(Item item)
+        public ConjuredItemQualityUpdater()
         {
-            item.Quality = Math.Max(DEFAULT_MIN_QUALITY, item.Quality-(DEFAULT_QUALITY_DECREASE*CONJURED_QUALITY_DECREASE_FACTOR*GetQualityChangeFactor(item)));
+            QualityDecrease = 2*DEFAULT_QUALITY_DECREASE;
         }
     }
 }
