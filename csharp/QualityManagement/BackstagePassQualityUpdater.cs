@@ -4,9 +4,9 @@ namespace csharp
 {
     public class BackstagePassQualityUpdater : QualityUpdater
     {
-        public static int DEFAULT_STAGE_PASS_QUALITY_INCREASE = 1;
-        public static int LESS_THAN_10_DAYS_QUALITY_INCREASE = 2;
-        public static int LESS_THAN_5_DAYS_QUALITY_INCREASE = 3;
+        public const int DEFAULT_STAGE_PASS_QUALITY_INCREASE = 1;
+        public const int LESS_THAN_10_DAYS_QUALITY_INCREASE = 2;
+        public const int LESS_THAN_5_DAYS_QUALITY_INCREASE = 3;
         public override void UpdateItemQuality(Item item)
         {
             if (item.SellIn <= 0)
