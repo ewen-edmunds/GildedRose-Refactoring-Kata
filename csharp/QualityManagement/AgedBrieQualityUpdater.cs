@@ -3,7 +3,7 @@ using System;
 
 namespace csharp
 {
-    public class AgedBrieQualityManager : QualityManager
+    public class AgedBrieQualityUpdater : QualityUpdater
     {
         public static int AGED_BRIE_QUALITY_INCREASE = 1;
         public override void UpdateItemQuality(Item item)

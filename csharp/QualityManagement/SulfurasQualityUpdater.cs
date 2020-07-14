@@ -1,6 +1,6 @@
 ﻿namespace csharp
 {
-    public class SulfurasQualityManager : QualityManager
+    public class SulfurasQualityUpdater : QualityUpdater
     {
         public override void UpdateItemQuality(Item item)
         {

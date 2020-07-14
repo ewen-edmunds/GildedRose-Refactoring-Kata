@@ -2,7 +2,7 @@
 
 namespace csharp
 {
-    public class BackstagePassQualityManager : QualityManager
+    public class BackstagePassQualityUpdater : QualityUpdater
     {
         public static int DEFAULT_STAGE_PASS_QUALITY_INCREASE = 1;
         public static int LESS_THAN_10_DAYS_QUALITY_INCREASE = 2;

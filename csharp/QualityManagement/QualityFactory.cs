@@ -2,27 +2,27 @@
 {
     public static class QualityFactory
     {
-        public static void UpdateItemQuality(Item item)
+        public static QualityUpdater QualityManager(Item item)
         {
             if (item.Name == "Aged Brie")
             {
-                new AgedBrieQualityManager().UpdateItemQuality(item);
+                return new AgedBrieQualityUpdater();
             }
             else if (item.Name == "Backstage passes to a TAFKAL80ETC concert")
             {
-                new BackstagePassQualityManager().UpdateItemQuality(item);
+                return new BackstagePassQualityUpdater();
             }
             else if (item.Name == "Sulfuras, Hand of Ragnaros")
             {
-                new SulfurasQualityManager().UpdateItemQuality(item);
+                return new SulfurasQualityUpdater();
             }
             else if (item.Name.StartsWith("Conjured"))
             {
-                new ConjuredItemQualityManager().UpdateItemQuality(item);
+                return new ConjuredItemQualityUpdater();
             }
             else
             {
-                new RegularItemQualityManager().UpdateItemQuality(item);
+                return new QualityUpdater();
             }
         }
     }
