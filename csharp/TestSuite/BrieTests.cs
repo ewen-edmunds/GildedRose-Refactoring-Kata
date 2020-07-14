@@ -10,7 +10,7 @@ namespace csharp
         public void BrieQualityGoesUpOnce()
         {
             IList<Item> Items = new List<Item> { new Item { Name = "Aged Brie", SellIn = 100, Quality = 0 } };
-            QualityUpdater qualityUpdater = QualityFactory.QualityManager(Items[0]);
+            QualityUpdater qualityUpdater = QualityFactory.GetQualityManager(Items[0]);
             qualityUpdater.UpdateItemQuality(Items[0]);
             Assert.AreEqual(1, Items[0].Quality);
         }
@@ -24,7 +24,7 @@ namespace csharp
                 {
                     new Item {Name = "Aged Brie", SellIn = 100, Quality = 10}
                 };
-                QualityUpdater qualityUpdater = QualityFactory.QualityManager(Items[0]);
+                QualityUpdater qualityUpdater = QualityFactory.GetQualityManager(Items[0]);
                 
                 
                 for (int j = 0; j < numDaysToSimulate; j++)
@@ -45,7 +45,7 @@ namespace csharp
                 {
                     new Item {Name = "Aged Brie", SellIn = 0, Quality = 10}
                 };
-                QualityUpdater qualityUpdater = QualityFactory.QualityManager(Items[0]);
+                QualityUpdater qualityUpdater = QualityFactory.GetQualityManager(Items[0]);
                 
                 
                 for (int j = 0; j < numDaysToSimulate; j++)
@@ -66,7 +66,7 @@ namespace csharp
                 {
                     new Item {Name = "Aged Brie", SellIn = 15, Quality = 40}
                 };
-                QualityUpdater qualityUpdater = QualityFactory.QualityManager(Items[0]);
+                QualityUpdater qualityUpdater = QualityFactory.GetQualityManager(Items[0]);
                 
                 
                 for (int j = 0; j < numDaysToSimulate; j++)

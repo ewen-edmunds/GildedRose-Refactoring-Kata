@@ -15,7 +15,7 @@ namespace csharp
                 {
                     new Item {Name = "Sulfuras, Hand of Ragnaros", SellIn = 20, Quality = 80}
                 };
-                QualityUpdater qualityUpdater = QualityFactory.QualityManager(Items[0]);
+                QualityUpdater qualityUpdater = QualityFactory.GetQualityManager(Items[0]);
                 
                 
                 for (int j = 0; j < numDaysToSimulate; j++)

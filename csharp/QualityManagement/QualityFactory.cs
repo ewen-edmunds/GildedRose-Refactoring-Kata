@@ -2,7 +2,7 @@
 {
     public static class QualityFactory
     {
-        public static QualityUpdater QualityManager(Item item)
+        public static QualityUpdater GetQualityManager(Item item)
         {
             if (item.Name == "Aged Brie")
             {

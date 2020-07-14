@@ -9,13 +9,8 @@ namespace csharp
         public const int DEFAULT_MAX_QUALITY = 50;
         public const int DEFAULT_MIN_QUALITY = 0;
         
-        public int QualityDecrease;
-        
-        public QualityUpdater()
-        {
-            QualityDecrease = DEFAULT_QUALITY_DECREASE;
-        }
-        
+        public int QualityDecrease= DEFAULT_QUALITY_DECREASE;
+
         public virtual void UpdateItemQuality(Item item)
         {
             item.Quality = Math.Min(DEFAULT_MAX_QUALITY, Math.Max(DEFAULT_MIN_QUALITY, item.Quality-(QualityDecrease*GetQualityChangeFactor(item))));
