@@ -71,7 +71,7 @@
     <Compile Include="QualityManagement\QualityFactory.cs" />
     <Compile Include="QualityManagement\QualityUpdater.cs" />
     <Compile Include="QualityManagement\SulfurasQualityUpdater.cs" />
-    <Compile Include="SellInManagement\SellInFactory.cs" />
+    <Compile Include="SellInManagement\SellInUpdater.cs" />
     <Compile Include="TestSuite\ApprovalTest.cs" />
     <Compile Include="TestSuite\BackstagePassTests.cs" />
     <Compile Include="TestSuite\BrieTests.cs" />

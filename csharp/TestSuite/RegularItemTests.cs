@@ -12,8 +12,8 @@ namespace csharp
             {
                 new Item {Name = "+5 Dexterity Vest", SellIn = 10, Quality = 20}
             };
-            GildedRose app = new GildedRose(Items);
-            app.UpdateQuality();
+            QualityUpdater qualityUpdater = new QualityUpdater();
+            qualityUpdater.UpdateItemQuality(Items[0]);
             Assert.AreEqual(19, Items[0].Quality);
         }
         
@@ -24,8 +24,7 @@ namespace csharp
             {
                 new Item {Name = "+5 Dexterity Vest", SellIn = 10, Quality = 20}
             };
-            GildedRose app = new GildedRose(Items);
-            app.UpdateQuality();
+            SellInUpdater.UpdateSellIn(Items[0]);
             Assert.AreEqual(9, Items[0].SellIn);
         }
         
@@ -38,13 +37,12 @@ namespace csharp
                 {
                     new Item {Name = "+5 Dexterity Vest", SellIn = 50, Quality = 40}
                 };
-                GildedRose app = new GildedRose(Items);
+                QualityUpdater qualityUpdater = new QualityUpdater();
                 
                 for (int j = 0; j < numDaysToSimulate; j++)
                 {
-                    app.UpdateQuality();
+                    qualityUpdater.UpdateItemQuality(Items[0]);
                 }
-                
                 Assert.AreEqual(40-numDaysToSimulate, Items[0].Quality);
             }
         }
@@ -58,11 +56,10 @@ namespace csharp
                 {
                     new Item {Name = "+5 Dexterity Vest", SellIn = 10, Quality = 20}
                 };
-                GildedRose app = new GildedRose(Items);
                 
                 for (int j = 0; j < numDaysToSimulate; j++)
                 {
-                    app.UpdateQuality();
+                    SellInUpdater.UpdateSellIn(Items[0]);
                 }
                 
                 Assert.AreEqual(10-numDaysToSimulate, Items[0].SellIn);
@@ -78,11 +75,11 @@ namespace csharp
                 {
                     new Item {Name = "+5 Dexterity Vest", SellIn = 10, Quality = 10}
                 };
-                GildedRose app = new GildedRose(Items);
+                QualityUpdater qualityUpdater = new QualityUpdater();
                 
                 for (int j = 0; j < numDaysToSimulate; j++)
                 {
-                    app.UpdateQuality();
+                    qualityUpdater.UpdateItemQuality(Items[0]);
                 }
                 
                 Assert.GreaterOrEqual(Items[0].Quality, 0); 
@@ -98,11 +95,11 @@ namespace csharp
                 {
                     new Item {Name = "+5 Dexterity Vest", SellIn = 0, Quality = 50}
                 };
-                GildedRose app = new GildedRose(Items);
+                QualityUpdater qualityUpdater = new QualityUpdater();
                 
                 for (int j = 0; j < numDaysToSimulate; j++)
                 {
-                    app.UpdateQuality();
+                    qualityUpdater.UpdateItemQuality(Items[0]);
                 }
                 
                 Assert.AreEqual(50-(2*numDaysToSimulate), Items[0].Quality);

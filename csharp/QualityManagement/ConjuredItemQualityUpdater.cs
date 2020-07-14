@@ -9,4 +9,4 @@ namespace csharp
             QualityDecrease = 2*DEFAULT_QUALITY_DECREASE;
         }
     }
-}
+} 

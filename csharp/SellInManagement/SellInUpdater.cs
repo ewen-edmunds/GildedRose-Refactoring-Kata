@@ -1,6 +1,6 @@
 ﻿namespace csharp
 {
-    public static class SellInFactory
+    public static class SellInUpdater
     {
         public static void UpdateSellIn(Item item)
         {
