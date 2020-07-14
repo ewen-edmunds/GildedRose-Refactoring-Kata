@@ -89,5 +89,25 @@ namespace csharp
                 Assert.GreaterOrEqual(Items[0].Quality, 0); 
             }
         }
+        
+        [Test]
+        public void ConjuredItemQualityDecreasesTwiceAsFastPastSellInDate()
+        {
+            for (int numDaysToSimulate = 0; numDaysToSimulate < 10; numDaysToSimulate++)
+            {
+                IList<Item> Items = new List<Item>
+                {
+                    new Item {Name = "Conjured Mana Buffet", SellIn = 0, Quality = 50}
+                };
+                GildedRose app = new GildedRose(Items);
+                
+                for (int j = 0; j < numDaysToSimulate; j++)
+                {
+                    app.UpdateQuality();
+                }
+                
+                Assert.AreEqual(50-(4*numDaysToSimulate), Items[0].Quality);
+            }
+        }
     }
 }
