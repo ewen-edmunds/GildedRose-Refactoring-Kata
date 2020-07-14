@@ -68,6 +68,7 @@
     <Compile Include="TestSuite\ApprovalTest.cs" />
     <Compile Include="TestSuite\BackstagePassTests.cs" />
     <Compile Include="TestSuite\BrieTests.cs" />
+    <Compile Include="TestSuite\ConjuredItemTests.cs" />
     <Compile Include="TestSuite\GildedRoseTest.cs" />
     <Compile Include="TestSuite\RegularItemTests.cs" />
     <Compile Include="TestSuite\SulfurasTests.cs" />
