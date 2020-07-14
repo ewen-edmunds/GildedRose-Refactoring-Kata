@@ -15,11 +15,12 @@ namespace csharp
                 {
                     new Item {Name = "Sulfuras, Hand of Ragnaros", SellIn = 20, Quality = 80}
                 };
-                GildedRose app = new GildedRose(Items);
+                QualityUpdater qualityUpdater = QualityFactory.QualityManager(Items[0]);
+                
                 
                 for (int j = 0; j < numDaysToSimulate; j++)
                 {
-                    app.UpdateQuality();
+                    qualityUpdater.UpdateItemQuality(Items[0]);
                 }
                 
                 Assert.AreEqual(80, Items[0].Quality);
