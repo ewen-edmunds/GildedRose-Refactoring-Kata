@@ -15,9 +15,8 @@ namespace csharp
             for (var i = 0; i < Items.Count; i++)
             {
                 Item item = Items[i];
-                QualityFactoryPattern.UpdateItemQuality(item);
-                item.SellIn -= 1;
-                //todo: UpdateSellIn(item);
+                QualityFactory.UpdateItemQuality(item);
+                SellInFactory.UpdateSellIn(item);
             }
         }
     }

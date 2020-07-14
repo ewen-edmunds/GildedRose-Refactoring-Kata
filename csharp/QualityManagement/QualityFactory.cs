@@ -1,6 +1,6 @@
 ﻿namespace csharp
 {
-    public static class QualityFactoryPattern
+    public static class QualityFactory
     {
         public static void UpdateItemQuality(Item item)
         {

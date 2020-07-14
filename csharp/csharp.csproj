@@ -68,10 +68,11 @@
     <Compile Include="QualityManagement\AgedBrieQualityManager.cs" />
     <Compile Include="QualityManagement\BackstagePassQualityManager.cs" />
     <Compile Include="QualityManagement\ConjuredItemQualityManager.cs" />
-    <Compile Include="QualityManagement\QualityFactoryPattern.cs" />
+    <Compile Include="QualityManagement\QualityFactory.cs" />
     <Compile Include="QualityManagement\QualityManager.cs" />
     <Compile Include="QualityManagement\RegularItemQualityManager.cs" />
     <Compile Include="QualityManagement\SulfurasQualityManager.cs" />
+    <Compile Include="SellInManagement\SellInFactory.cs" />
     <Compile Include="TestSuite\ApprovalTest.cs" />
     <Compile Include="TestSuite\BackstagePassTests.cs" />
     <Compile Include="TestSuite\BrieTests.cs" />
